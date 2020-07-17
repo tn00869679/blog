@@ -197,39 +197,9 @@
 <li>PRIMARY KEY (‵id‵) → 設定主鍵欄位</li>
 <li>ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 → 設定自動遞增及預設字元為 UTF-8</li>
 </ul>
-<h3 id="3-修改"><a href="#3-修改" class="headerlink" title="3. 修改 :"></a><strong>3. 修改 :</strong></h3><ul>
-<li>在 table 內新增欄位 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> <span class="string">`欄位名稱`</span> 型態(長度);</span><br></pre></td></tr></table></figure></li>
-<li>在 table 內新增欄位，欄位必須加入 INDEX 並且設定 DEFAULT 值 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> <span class="string">`欄位名稱`</span> 型態(長度), <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`欄位名稱`</span>);</span><br></pre></td></tr></table></figure></li>
-<li>在 table 內新增 INDEX : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`欄位名稱`</span>), <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`欄位名稱`</span>), (可繼續新增並用逗點隔開)... ;</span><br></pre></td></tr></table></figure></li>
-<li>修改原欄位名稱、修改資料長度、資料型態 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">CHANGE</span> <span class="keyword">COLUMN</span> <span class="string">`舊欄位`</span> <span class="string">`新欄位`</span> 新型態(新長度), <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`新欄位`</span>);</span><br></pre></td></tr></table></figure></li>
-<li>移除 PRIMAY KEY : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">DROP</span> PRIMARY <span class="keyword">KEY</span>;</span><br></pre></td></tr></table></figure></li>
-<li>移除 INDEX : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">DROP</span> <span class="keyword">INDEX</span> <span class="string">`欄位名稱`</span>;</span><br></pre></td></tr></table></figure></li>
-<li>在 table 中新增新資料 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`tableName`</span> <span class="keyword">VALUES</span> (<span class="string">'欄位1的第一筆新資料'</span>, <span class="string">'欄位2的第一筆新資料'</span>, <span class="string">'欄位3的第一筆新資料'</span>,...), (<span class="string">'欄位1的第二筆新資料'</span>, <span class="string">'欄位2的第二筆新資料'</span>, <span class="string">'欄位3的第二筆新資料'</span>,...);</span><br></pre></td></tr></table></figure></li>
-<li>更新欄位裡面資料 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="string">`tableName`</span> <span class="keyword">SET</span> <span class="string">`欄位名稱1`</span>= 新數值,<span class="string">`欄位名稱2`</span>= 新數值, ... <span class="keyword">WHERE</span> 篩選條件式;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="4-查詢"><a href="#4-查詢" class="headerlink" title="4. 查詢 :"></a><strong>4. 查詢 :</strong></h3><ul>
-<li><p>從 table 抓出所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出某個欄位所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`欄位名稱`</span> <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出欄位中所有資料且不重複 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> <span class="string">`欄位名稱`</span> <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出多個欄位的所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`欄位名稱 1`</span>, <span class="string">`欄位名稱 2`</span> <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出多個欄位的所有資料且不重複 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCTROW</span> studname, studno <span class="keyword">FROM</span> student;</span><br></pre></td></tr></table></figure>
-<p><font color="#FF0000">註 :</font> <strong>DISTINCT 指某欄位不重複，DISTINCTROW 指整個列不重複。</strong></p>
-</li>
-<li><p>從多張 table 中抓出符合條件的所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`tableName 1`</span>, <span class="string">`tableName 2`</span> <span class="keyword">WHERE</span> 條件式;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出所有資料並依照欄位資料排序 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`tableName`</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="string">`欄位名稱`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>使用 GROUP BY 按照某個欄位進行分組，並統計各出現次數記錄 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`欄位名稱`</span>, <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> <span class="string">`tableName`</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="string">`分組依據的欄位名稱`</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+        
+          <a class="article-more-a" href="/blog/2020/07/17/ySQL-%E6%96%B0%E5%A2%9E%E3%80%81%E5%88%AA%E9%99%A4%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E5%8E%9F%E7%94%9F%E8%AA%9E%E6%B3%95/#more">more >></a>
+        
       
 
       
