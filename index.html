@@ -190,13 +190,6 @@
 
 </li>
 </ul>
-<h3 id="2-新增-table"><a href="#2-新增-table" class="headerlink" title="2. 新增 table :"></a><strong>2. 新增 table :</strong></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  <span class="string">`picture`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`time`</span> datetime <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`carnumber`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`serialnumber`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`deviceplace`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`processcheck`</span> <span class="built_in">int</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">1</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
-<p>格式為 : </p>
-<ul>
-<li>‵欄位名稱‵　型態(代表資料顯示的最小長度)　DEFAULT　預設值,</li>
-<li>PRIMARY KEY (‵id‵) → 設定主鍵欄位</li>
-<li>ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 → 設定自動遞增及預設字元為 UTF-8</li>
-</ul>
         
           <a class="article-more-a" href="/blog/2020/07/17/ySQL-%E6%96%B0%E5%A2%9E%E3%80%81%E5%88%AA%E9%99%A4%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E5%8E%9F%E7%94%9F%E8%AA%9E%E6%B3%95/#more">more >></a>
         
@@ -261,20 +254,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="閱讀分成四個層次"><a href="#閱讀分成四個層次" class="headerlink" title="閱讀分成四個層次 :"></a><strong>閱讀分成四個層次 :</strong></h2><h4 id="1-基礎閱讀"><a href="#1-基礎閱讀" class="headerlink" title="1. 基礎閱讀"></a>1. 基礎閱讀</h4><pre><code>- 只要看得懂字就可以了。</code></pre><h4 id="2-檢視閱讀"><a href="#2-檢視閱讀" class="headerlink" title="2. 檢視閱讀"></a>2. 檢視閱讀</h4><pre><code>(一)略讀 : 
-1. 先看書名頁，然後如果有序就先看序。
-2. 研究目錄頁。
-3. 如果書中附有索引，也要檢閱一下(參考一下被引用頁數的多寡)。
-4. 若是包著書衣的新書，讀一下出版者的介紹。
-----------------------------------------------------------------------------------------------------
-以上足以判斷是否值得繼續讀下去。
-5. 開始對模糊印象中-書的目錄，挑幾個看來跟主題息息相關篇章來看(若開頭或結尾有摘要說明，就要仔細閱讀這些說明)。
-6. 最後，把書打開來，東翻翻西翻翻，唸個一、兩段，有時候連續讀幾頁，但不要太多。
-
-(二)粗淺的閱讀 : 
-1. 頭一次面對一本難讀的書的時候，從頭到尾先讀完一遍，碰到不懂的地方不要停下來查詢或思索。
-2. 逗留與倒退的問題靠手指輔助解決。
-3. 摘要 : 在閱讀一本書的時候，慢不該慢到不值得，快不該快到有損於滿足與理解。</code></pre>
+        <h2 id="閱讀分成四個層次"><a href="#閱讀分成四個層次" class="headerlink" title="閱讀分成四個層次 :"></a><strong>閱讀分成四個層次 :</strong></h2><h4 id="1-基礎閱讀"><a href="#1-基礎閱讀" class="headerlink" title="1. 基礎閱讀"></a>1. 基礎閱讀</h4><pre><code>- 只要看得懂字就可以了。</code></pre>
         
           <a class="article-more-a" href="/blog/2020/01/04/ReadSkills/#more">more >></a>
         

@@ -6,17 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>MySQL 新增、刪除、修改、查詢範例 (原生語法) | Darren&#39;s blog</title>
+  <title>6 | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由於初入網頁領域，需要學習的技術太多種，在這邊記錄一下 MySQL 常用功能語法 :  1. 刪除 : 刪除 table : 1DROP TABLE &#96;tableName&#96;; 刪除欄位 : 1ALTER TABLE &#96;tableName&#96; DROP COLUMN &#96;欄位名稱&#96;;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL 新增、刪除、修改、查詢範例 (原生語法)">
-<meta property="og:url" content="https://tn00869679.github.io/blog/2020/07/17/ySQL-%E6%96%B0%E5%A2%9E%E3%80%81%E5%88%AA%E9%99%A4%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E5%8E%9F%E7%94%9F%E8%AA%9E%E6%B3%95/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="6">
+<meta property="og:url" content="https://tn00869679.github.io/blog/%E6%97%81%E9%96%80%E5%B7%A6%E9%81%93/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
-<meta property="og:description" content="由於初入網頁領域，需要學習的技術太多種，在這邊記錄一下 MySQL 常用功能語法 :  1. 刪除 : 刪除 table : 1DROP TABLE &#96;tableName&#96;; 刪除欄位 : 1ALTER TABLE &#96;tableName&#96; DROP COLUMN &#96;欄位名稱&#96;;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-17T09:11:10.000Z">
-<meta property="article:modified_time" content="2020-07-18T07:11:17.410Z">
+<meta property="article:published_time" content="2020-07-20T12:38:05.000Z">
+<meta property="article:modified_time" content="2020-07-20T14:15:18.366Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -165,75 +163,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ySQL-新增、刪除、修改、查詢範例-原生語法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MySQL 新增、刪除、修改、查詢範例 (原生語法)
+      6
     </h1>
   
 
         
-        <a href="/blog/2020/07/17/ySQL-%E6%96%B0%E5%A2%9E%E3%80%81%E5%88%AA%E9%99%A4%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E5%8E%9F%E7%94%9F%E8%AA%9E%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-07-17T09:11:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
+        <a href="/blog/%E6%97%81%E9%96%80%E5%B7%A6%E9%81%93/index.html" class="archive-article-date">
+  	<time datetime="2020-07-20T12:38:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>由於初入網頁領域，需要學習的技術太多種，在這邊記錄一下 MySQL 常用功能語法 : </p>
-<h3 id="1-刪除"><a href="#1-刪除" class="headerlink" title="1. 刪除 :"></a><strong>1. 刪除 :</strong></h3><ul>
-<li>刪除 table : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li>刪除欄位 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> <span class="string">`欄位名稱`</span>;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="2-新增-table"><a href="#2-新增-table" class="headerlink" title="2. 新增 table :"></a><strong>2. 新增 table :</strong></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  <span class="string">`picture`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`time`</span> datetime <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`carnumber`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`serialnumber`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`deviceplace`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`processcheck`</span> <span class="built_in">int</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">1</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
-<p>格式為 : </p>
-<ul>
-<li>‵欄位名稱‵　型態(代表資料顯示的最小長度)　DEFAULT　預設值,</li>
-<li>PRIMARY KEY (‵id‵) → 設定主鍵欄位</li>
-<li>ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 → 設定自動遞增及預設字元為 UTF-8</li>
-</ul>
-<h3 id="3-修改"><a href="#3-修改" class="headerlink" title="3. 修改 :"></a><strong>3. 修改 :</strong></h3><ul>
-<li>在 table 內新增欄位 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> <span class="string">`欄位名稱`</span> 型態(長度);</span><br></pre></td></tr></table></figure></li>
-<li>在 table 內新增欄位，欄位必須加入 INDEX 並且設定 DEFAULT 值 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> <span class="string">`欄位名稱`</span> 型態(長度), <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`欄位名稱`</span>);</span><br></pre></td></tr></table></figure></li>
-<li>在 table 內新增 INDEX : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`欄位名稱`</span>), <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`欄位名稱`</span>), (可繼續新增並用逗點隔開)... ;</span><br></pre></td></tr></table></figure></li>
-<li>修改原欄位名稱、修改資料長度、資料型態 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">CHANGE</span> <span class="keyword">COLUMN</span> <span class="string">`舊欄位`</span> <span class="string">`新欄位`</span> 新型態(新長度), <span class="keyword">ADD</span> <span class="keyword">INDEX</span>(<span class="string">`新欄位`</span>);</span><br></pre></td></tr></table></figure></li>
-<li>移除 PRIMAY KEY : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">DROP</span> PRIMARY <span class="keyword">KEY</span>;</span><br></pre></td></tr></table></figure></li>
-<li>移除 INDEX : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">DROP</span> <span class="keyword">INDEX</span> <span class="string">`欄位名稱`</span>;</span><br></pre></td></tr></table></figure></li>
-<li>在 table 中新增新資料 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`tableName`</span> <span class="keyword">VALUES</span> (<span class="string">'欄位1的第一筆新資料'</span>, <span class="string">'欄位2的第一筆新資料'</span>, <span class="string">'欄位3的第一筆新資料'</span>,...), (<span class="string">'欄位1的第二筆新資料'</span>, <span class="string">'欄位2的第二筆新資料'</span>, <span class="string">'欄位3的第二筆新資料'</span>,...);</span><br></pre></td></tr></table></figure></li>
-<li>更新欄位裡面資料 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="string">`tableName`</span> <span class="keyword">SET</span> <span class="string">`欄位名稱1`</span>= 新數值,<span class="string">`欄位名稱2`</span>= 新數值, ... <span class="keyword">WHERE</span> 篩選條件式;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="4-查詢"><a href="#4-查詢" class="headerlink" title="4. 查詢 :"></a><strong>4. 查詢 :</strong></h3><ul>
-<li><p>從 table 抓出所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出某個欄位所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`欄位名稱`</span> <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出欄位中所有資料且不重複 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> <span class="string">`欄位名稱`</span> <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出多個欄位的所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`欄位名稱 1`</span>, <span class="string">`欄位名稱 2`</span> <span class="keyword">FROM</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出多個欄位的所有資料且不重複 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCTROW</span> studname, studno <span class="keyword">FROM</span> student;</span><br></pre></td></tr></table></figure>
-<p><font color="#FF0000">註 :</font> <strong>DISTINCT 指某欄位不重複，DISTINCTROW 指整個列不重複。</strong></p>
-</li>
-<li><p>從多張 table 中抓出符合條件的所有資料 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`tableName 1`</span>, <span class="string">`tableName 2`</span> <span class="keyword">WHERE</span> 條件式;</span><br></pre></td></tr></table></figure></li>
-<li><p>從 table 中抓出所有資料並依照欄位資料排序 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`tableName`</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="string">`欄位名稱`</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>使用 GROUP BY 按照某個欄位進行分組，並統計各出現次數記錄 : </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`欄位名稱`</span>, <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> <span class="string">`tableName`</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="string">`分組依據的欄位名稱`</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+        
       
 
       
@@ -291,7 +241,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://tn00869679.github.io/blog/2020/07/17/ySQL-%E6%96%B0%E5%A2%9E%E3%80%81%E5%88%AA%E9%99%A4%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E5%8E%9F%E7%94%9F%E8%AA%9E%E6%B3%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://tn00869679.github.io/blog/%E6%97%81%E9%96%80%E5%B7%A6%E9%81%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -303,16 +253,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-  
-    <a href="/blog/2020/01/04/ReadSkills/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">How To Read The Books</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -363,7 +303,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
