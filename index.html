@@ -66,7 +66,7 @@
 			</ul>
 		</nav>
                 <nav>
-                    總文章數 :  3
+                    總文章數 :  4
                 </nav>
 		<nav class="header-smart-menu">
     		
@@ -168,6 +168,96 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Query-Selector" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/07/27/Query-Selector/">JQuery Selector</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2020/07/27/Query-Selector/" class="archive-article-date">
+  	<time datetime="2020-07-27T07:34:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>選擇 HTML 屬性，使用標籤名稱：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.hide(<span class="string">'h2'</span>)  <span class="comment">//隱藏所有 &lt;h2&gt; 屬性</span></span><br></pre></td></tr></table></figure></li>
+<li>選擇特定 ID 的屬性，一個井字號，然後是 HTML 屬性的 ID：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.hide(<span class="string">'#London'</span>)  <span class="comment">//隱藏 id =“ London” 的屬性</span></span><br></pre></td></tr></table></figure></li>
+<li>選擇特定 class 的屬性，一個句點字符後跟 class 的名稱：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.hide(<span class="string">'.city'</span>)  <span class="comment">//隱藏所有帶有 class =“ city” 的屬性</span></span><br></pre></td></tr></table></figure></li>
+<li>選擇特定型態的屬性 (Type Selector) : <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'div'</span>)  <span class="comment">//對應到 &lt;div&gt;&lt;/div&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>選擇子屬性(Descendant selectors) : <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.ex-class div'</span>)  <span class="comment">//使用空白表示階層關係</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"ex-class"</span>&gt;</span><br><span class="line">  &lt;div&gt;example&lt;<span class="regexp">/div&gt;  /</span><span class="regexp">/取得此 div 屬性</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></li>
+<li>屬性選擇器 (Attribute Selector) : <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'[type=text]'</span>)  <span class="comment">//使用中括號包覆</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"text"</span> &gt;  <span class="comment">//取得 type 為 text 的</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="OR"><a href="#OR" class="headerlink" title="OR :"></a>OR :</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#ex-id, .ex-class'</span>)  <span class="comment">//使用逗號 (,) 隔開</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"ex-id"</span>&gt;id selector&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;div class="ex-class"&gt;class selector&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="AND"><a href="#AND" class="headerlink" title="AND :"></a>AND :</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//多個選擇器連接在一起,表示網頁元素須同時滿足所有規格</span></span><br><span class="line">$(<span class="string">'.ex-class.ex-class2'</span>)  <span class="comment">//會找出同時擁有 ex-class 跟 ex-class2 的元件</span></span><br></pre></td></tr></table></figure>
+如下<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"ex-class ex-class2"</span>&gt;<span class="class"><span class="keyword">class</span> <span class="title">selector</span>&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+以下則是找出同時擁有 ex-class 和 ex-class2 的 div 元件<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'div.ex-class.ex-class2'</span>)  <span class="comment">//型態應該寫在最前面</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="map-handler"><a href="#map-handler" class="headerlink" title=".map (handler) :"></a>.map (handler) :</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//將目前結果逐一送至 Handler 函式執行處理，並回傳陣列結果</span></span><br><span class="line"><span class="keyword">var</span> ids = $(<span class="string">'li'</span>).map(<span class="function"><span class="keyword">function</span>(<span class="params">index, element</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> $(<span class="string">'li'</span>).attr(<span class="string">'id'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="each-handler"><a href="#each-handler" class="headerlink" title=".each (handler) :"></a>.each (handler) :</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//將目前結果逐一送至 Handler 函式執行處理</span></span><br><span class="line">$(<span class="string">'li'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index, element</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// do something</span></span><br><span class="line">  <span class="comment">// $(this) is also element</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2020/07/27/Query-Selector/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-ySQL-新增、刪除、修改、查詢範例-原生語法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
