@@ -66,7 +66,7 @@
 			</ul>
 		</nav>
                 <nav>
-                    總文章數 :  6
+                    總文章數 :  10
                 </nav>
 		<nav class="header-smart-menu">
     		
@@ -157,6 +157,340 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MySQL-LEFT-JOIN、RIGHT-JOIN與JOIN的區別" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2021/03/30/MySQL-LEFT-JOIN%E3%80%81RIGHT-JOIN%E8%88%87JOIN%E7%9A%84%E5%8D%80%E5%88%A5/">MySQL : LEFT JOIN、RIGHT JOIN與JOIN的區別</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2021/03/30/MySQL-LEFT-JOIN%E3%80%81RIGHT-JOIN%E8%88%87JOIN%E7%9A%84%E5%8D%80%E5%88%A5/" class="archive-article-date">
+  	<time datetime="2021-03-29T16:18:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="MySQL-LEFT-JOIN、RIGHT-JOIN與JOIN的區別"><a href="#MySQL-LEFT-JOIN、RIGHT-JOIN與JOIN的區別" class="headerlink" title="MySQL : LEFT JOIN、RIGHT JOIN與JOIN的區別"></a>MySQL : LEFT JOIN、RIGHT JOIN與JOIN的區別</h3><p><strong>Table_1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>張三</td>
+<td>11</td>
+</tr>
+<tr>
+<td>2</td>
+<td>李四</td>
+<td>12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>王五</td>
+<td>13</td>
+</tr>
+</tbody></table>
+<p><strong>Table_2:</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>COURSE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3</td>
+<td>張三</td>
+<td>語文</td>
+</tr>
+<tr>
+<td>4</td>
+<td>張三</td>
+<td>數學</td>
+</tr>
+<tr>
+<td>5</td>
+<td>馬六</td>
+<td>英語</td>
+</tr>
+</tbody></table>
+        
+          <a class="article-more-a" href="/blog/2021/03/30/MySQL-LEFT-JOIN%E3%80%81RIGHT-JOIN%E8%88%87JOIN%E7%9A%84%E5%8D%80%E5%88%A5/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2021/03/30/MySQL-LEFT-JOIN%E3%80%81RIGHT-JOIN%E8%88%87JOIN%E7%9A%84%E5%8D%80%E5%88%A5/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Cookie-Session-的差異" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2021/03/30/Cookie-Session-%E7%9A%84%E5%B7%AE%E7%95%B0/">Cookie &amp; Session 的差異</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2021/03/30/Cookie-Session-%E7%9A%84%E5%B7%AE%E7%95%B0/" class="archive-article-date">
+  	<time datetime="2021-03-29T16:16:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Cookie-amp-Session-的差異"><a href="#Cookie-amp-Session-的差異" class="headerlink" title="Cookie &amp; Session 的差異"></a>Cookie &amp; Session 的差異</h3><p><strong>Cookie</strong><br>Cookie 是伺服器（Server）傳送給瀏覽器（Client）的一小片段資料，並請瀏覽器保存起來，以便往後向相同的伺服器發送請求時，附上這 Cookie 的資料。</p>
+<p><strong>Cookie 常見用途 :</strong> </p>
+<ol>
+<li>儲存和追蹤使用者行為</li>
+<li>儲存用戶登入、購物車等伺服器所需的資訊</li>
+<li>儲存使用者設定和偏好等</li>
+</ol>
+<p><strong>基本用戶登入流程範例 :</strong></p>
+<ol>
+<li>使用者透過瀏覽器登入畫面登入</li>
+<li>伺服器端通過驗證後，可以將使用者「已經登入」的資訊附在 Cookie 中回傳，並請瀏覽器保存起來</li>
+<li>往後，每當瀏覽器對伺服器發出請求時，會一併附上存有使用者「已經登入」狀態資訊的 Cookie 給伺服器</li>
+<li>伺服器透過 Cookie 就能辨識這位使用者已經通過驗證了</li>
+</ol>
+        
+          <a class="article-more-a" href="/blog/2021/03/30/Cookie-Session-%E7%9A%84%E5%B7%AE%E7%95%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2021/03/30/Cookie-Session-%E7%9A%84%E5%B7%AE%E7%95%B0/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Note-–-Git-操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/">Note – Git 操作</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2021-03-29T16:13:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Git-操作"><a href="#Git-操作" class="headerlink" title="Git 操作"></a>Git 操作</h3><p><strong>type 只允許使用以下類別 ：</strong></p>
+<ul>
+<li>feat: 新增/修改功能 (feature)。</li>
+<li>fix: 修補 bug (bug fix)。</li>
+<li>docs: 文件 (documentation)。</li>
+<li>style: 格式 (不影響程式碼運行的變動 white-space, formatting, missing semi colons, etc)。</li>
+<li>refactor: 重構 (既不是新增功能，也不是修補 bug 的程式碼變動)。</li>
+<li>perf: 改善效能 (A code change that improves performance)。</li>
+<li>test: 增加測試 (when adding missing tests)。</li>
+<li>chore: 建構程序或輔助工具的變動 (maintain)。</li>
+<li>revert: 撤銷回覆先前的 commit 例如：revert: type(scope): subject (回覆版本：xxxx)。</li>
+</ul>
+<p><strong><u>type 是用來告訴進行 Code Review 的人應該以什麼角度來檢視 Commit 內容。</u></strong></p>
+        
+          <a class="article-more-a" href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Note-–-pm2-指令大全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2021/03/30/Note-%E2%80%93-pm2-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/">Note – pm2 指令大全</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2021/03/30/Note-%E2%80%93-pm2-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="archive-article-date">
+  	<time datetime="2021-03-29T16:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="pm2-指令大全"><a href="#pm2-指令大全" class="headerlink" title="pm2 指令大全 :"></a>pm2 指令大全 :</h4>
+        
+          <a class="article-more-a" href="/blog/2021/03/30/Note-%E2%80%93-pm2-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2021/03/30/Note-%E2%80%93-pm2-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-頁開發流程-blade-js-如何建立連結" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -170,7 +504,7 @@
 
         
         <a href="/blog/2020/07/27/%E9%A0%81%E9%96%8B%E7%99%BC%E6%B5%81%E7%A8%8B-blade-js-%E5%A6%82%E4%BD%95%E5%BB%BA%E7%AB%8B%E9%80%A3%E7%B5%90/" class="archive-article-date">
-  	<time datetime="2020-07-27T07:57:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
+  	<time datetime="2020-07-27T07:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
 </a>
         
       </header>
@@ -428,7 +762,8 @@
         <p>由於初入網頁領域，需要學習的技術太多種，在這邊記錄一下 MySQL 常用功能語法 : </p>
 <h3 id="1-刪除"><a href="#1-刪除" class="headerlink" title="1. 刪除 :"></a><strong>1. 刪除 :</strong></h3><ul>
 <li>刪除 table : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span>;</span><br></pre></td></tr></table></figure></li>
-<li>刪除欄位 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> <span class="string">`欄位名稱`</span>;</span><br></pre></td></tr></table></figure>
+<li>刪除欄位 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`tableName`</span> <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> <span class="string">`欄位名稱`</span>;</span><br></pre></td></tr></table></figure></li>
+<li>刪除單筆資料 : <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> <span class="string">`資料庫名稱`</span>.<span class="string">`tableName`</span> <span class="keyword">WHERE</span>  <span class="string">`id`</span>= <span class="string">`單筆`</span>;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -649,7 +984,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Darren Lin
+    		&copy; 2021 Darren Lin
     	</div>
       	<div class="footer-right">
       		
