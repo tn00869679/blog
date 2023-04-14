@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>課外提升 | Darren&#39;s blog</title>
+  <title>SOLID 原則 | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="課外提升">
-<meta property="og:url" content="https://tn00869679.github.io/blog/extracurricular/index.html">
+  <meta name="description" content="SOLID目的是讓開發者或管理者在面對程式碼需要改變時，能有一套策略來應對。 Uncle Bob (Clean Code 作者) 提出了 5 個設計原則 :  單一職責原則（The Single Responsibility Principle, 簡稱 SRP) 開放-封閉原則 (The Open-Close Principle, 簡稱 OCP) 里氏替換原則 (The Liskov Substi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SOLID 原則">
+<meta property="og:url" content="https://tn00869679.github.io/blog/2023/04/14/SOLID-%E5%8E%9F%E5%89%87/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
+<meta property="og:description" content="SOLID目的是讓開發者或管理者在面對程式碼需要改變時，能有一套策略來應對。 Uncle Bob (Clean Code 作者) 提出了 5 個設計原則 :  單一職責原則（The Single Responsibility Principle, 簡稱 SRP) 開放-封閉原則 (The Open-Close Principle, 簡稱 OCP) 里氏替換原則 (The Liskov Substi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-27T02:46:38.000Z">
-<meta property="article:modified_time" content="2020-07-27T03:37:11.933Z">
+<meta property="article:published_time" content="2023-04-14T15:28:00.000Z">
+<meta property="article:modified_time" content="2023-04-14T15:36:40.634Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -157,27 +159,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-SOLID-原則" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      課外提升
+      SOLID 原則
     </h1>
   
 
         
-        <a href="/blog/extracurricular/index.html" class="archive-article-date">
-  	<time datetime="2020-07-27T02:46:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
+        <a href="/blog/2023/04/14/SOLID-%E5%8E%9F%E5%89%87/" class="archive-article-date">
+  	<time datetime="2023-04-14T15:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="SOLID"><a href="#SOLID" class="headerlink" title="SOLID"></a>SOLID</h3><p><strong><font color="#FF0000">目的是讓開發者或管理者在面對程式碼需要改變時，能有一套策略來應對。</font></strong></p>
+<p><strong>Uncle Bob (Clean Code 作者) 提出了 5 個設計原則 :</strong></p>
+<ul>
+<li>單一職責原則（The Single Responsibility Principle, 簡稱 SRP)</li>
+<li>開放-封閉原則 (The Open-Close Principle, 簡稱 OCP)</li>
+<li>里氏替換原則 (The Liskov Substitution Principle, 簡稱 LSP)</li>
+<li>接口隔離原則 (Interface Segregation Principle, 簡稱 ISP)</li>
+<li>依賴反轉原則 (The Dependency Inversion Principle, 簡稱 DIP)</li>
+</ul>
+<a id="more"></a>
+
+<p><strong>單一職責原則（The Single Responsibility Principle) :</strong></p>
+<ul>
+<li>指的是一個類只應該有一個單一的職責。換句話說，一個類應該只負責完成一件事情，並且應該只有一個引起它變化的原因。如果一個類承擔了太多的職責，那麼它將變得難以維護和擴展 (<strong>高內聚性,低耦合</strong>)。</li>
+</ul>
+<p><strong>開放-封閉原則 (The Open-Close Principle, 簡稱 OCP) :</strong></p>
+<ul>
+<li>指的是一個軟體實體應該對擴展開放，對修改封閉。也就是說，當我們需要對軟體進行修改時，應該通過新增新的程式碼來擴展它，而不是修改已有的程式碼。這樣可以確保原有程式碼的穩定性和可靠性。</li>
+</ul>
+<p><strong>里氏替換原則 (The Liskov Substitution Principle, 簡稱 LSP) :</strong></p>
+<ul>
+<li>指的是子類型必須能夠替換掉它們的父類型。換句話說，一個程式中的對象應該可以被它們的子類型所替換，而不會產生任何意外的行為。這可以確保程式碼的可重用性和靈活性。</li>
+</ul>
+<p><strong>接口隔離原則 (Interface Segregation Principle, 簡稱 ISP) :</strong></p>
+<ul>
+<li>指的是客戶端不應該強制依賴於它們不需要的介面。換句話說，一個介面應該只包含客戶端需要的方法，而不應該包含其他不需要的方法。這可以避免程式碼的冗餘和複雜性。</li>
+</ul>
+<p><strong>依賴反轉原則 (The Dependency Inversion Principle, 簡稱 DIP) :</strong></p>
+<ul>
+<li>指的是高層模組不應該依賴於低層模組，它們應該都依賴於抽象。換句話說，應該通過介面或抽象類來定義依賴關係，而不是通過具體實現。這可以提高程式碼的可擴展性和靈活性。</li>
+</ul>
+<p><strong>總結 :</strong><br>SOLID 原則是物件導向程式設計中的重要設計原則，可以幫助開發者建立高品質的軟體。這些原則強調了程式碼的可讀性、可維護性和可擴展性，可以提高程式碼的質量和可用性。瞭解和應用這些原則可以使開發者寫出易於理解和維護的程式碼，並且可以更快地進行迭代和升級。</p>
+<hr>
+<h6 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻 :"></a>參考文獻 :</h6><ul>
+<li><a href="https://wadehuang1993.github.io/blog/why_SOLID_principles_matter_to_you/#more" target="_blank" rel="noopener">https://wadehuang1993.github.io/blog/why_SOLID_principles_matter_to_you/#more</a></li>
+<li><a href="https://wadehuang1993.github.io/blog/why_we_need_SOLID_principles/#more" target="_blank" rel="noopener">https://wadehuang1993.github.io/blog/why_we_need_SOLID_principles/#more</a></li>
+<li><a href="https://wadehuang1993.github.io/blog/solid_lsp_definition_and_practices/" target="_blank" rel="noopener">https://wadehuang1993.github.io/blog/solid_lsp_definition_and_practices/</a></li>
+</ul>
+
       
 
       
@@ -186,6 +226,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -196,6 +247,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/blog/2023/04/14/%E5%8D%80%E5%A1%8A%E9%8F%88%E5%B8%B8%E8%A6%8B%E5%85%B1%E8%AD%98%E6%A9%9F%E5%88%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          區塊鏈常見共識機制
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2021/03/30/MySQL-LEFT-JOIN%E3%80%81RIGHT-JOIN%E8%88%87JOIN%E7%9A%84%E5%8D%80%E5%88%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL : LEFT JOIN、RIGHT JOIN與JOIN的區別</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -214,6 +284,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -236,7 +316,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
