@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>區塊鏈錢包 | Darren&#39;s blog</title>
+  <title>Merkle Tree &amp; Merkle proof | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概念 &amp; 生成過程在區塊鏈中，錢包地址和私鑰是成對存在的。錢包地址可以公開分享給他人，用於接收加密貨幣，而私鑰則是保密的，用於對加密貨幣進行簽章和控制。 錢包地址和私鑰的生成過程 :   隨機生成一個 256 位的隨機數（也稱為種子）。這個種子可以使用隨機數生成器生成，也可以由使用者提供。 將這個種子輸入到一個稱為雜湊函數（ex : SHA-256）中，以生成一個 256 位的雜湊值。 將">
+  <meta name="description" content="Merkle Tree 區塊鏈中用於驗證交易數據的加密技術。 是一種二元樹，其中每個葉子節點表示一個交易，每個非葉子節點表示其子節點的雜湊值。 技術的基本思想是通過計算雜湊值來驗證交易數據的完整性。  ※ 在區塊鏈中，每個區塊的頂部都有一個雜湊值，該雜湊值基於所有包含在該區塊中的交易的 Merkle Tree 計算得出。因此，如果任何一個交易被修改，整個 Merkle Tree 的雜湊值都會改變，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="區塊鏈錢包">
-<meta property="og:url" content="https://tn00869679.github.io/blog/2023/04/15/%E5%8D%80%E5%A1%8A%E9%8F%88%E9%8C%A2%E5%8C%85/index.html">
+<meta property="og:title" content="Merkle Tree &amp; Merkle proof">
+<meta property="og:url" content="https://tn00869679.github.io/blog/2023/04/23/Merkle-Tree-Merkle-proof/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
-<meta property="og:description" content="概念 &amp; 生成過程在區塊鏈中，錢包地址和私鑰是成對存在的。錢包地址可以公開分享給他人，用於接收加密貨幣，而私鑰則是保密的，用於對加密貨幣進行簽章和控制。 錢包地址和私鑰的生成過程 :   隨機生成一個 256 位的隨機數（也稱為種子）。這個種子可以使用隨機數生成器生成，也可以由使用者提供。 將這個種子輸入到一個稱為雜湊函數（ex : SHA-256）中，以生成一個 256 位的雜湊值。 將">
+<meta property="og:description" content="Merkle Tree 區塊鏈中用於驗證交易數據的加密技術。 是一種二元樹，其中每個葉子節點表示一個交易，每個非葉子節點表示其子節點的雜湊值。 技術的基本思想是通過計算雜湊值來驗證交易數據的完整性。  ※ 在區塊鏈中，每個區塊的頂部都有一個雜湊值，該雜湊值基於所有包含在該區塊中的交易的 Merkle Tree 計算得出。因此，如果任何一個交易被修改，整個 Merkle Tree 的雜湊值都會改變，">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-04-15T06:04:00.000Z">
-<meta property="article:modified_time" content="2023-04-15T06:58:08.360Z">
+<meta property="article:published_time" content="2023-04-23T15:47:00.000Z">
+<meta property="article:modified_time" content="2023-04-27T15:18:43.625Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -159,39 +159,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-區塊鏈錢包" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Merkle-Tree-Merkle-proof" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      區塊鏈錢包
+      Merkle Tree &amp; Merkle proof
     </h1>
   
 
         
-        <a href="/blog/2023/04/15/%E5%8D%80%E5%A1%8A%E9%8F%88%E9%8C%A2%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2023-04-15T06:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-15</time>
+        <a href="/blog/2023/04/23/Merkle-Tree-Merkle-proof/" class="archive-article-date">
+  	<time datetime="2023-04-23T15:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="概念-amp-生成過程"><a href="#概念-amp-生成過程" class="headerlink" title="概念 &amp; 生成過程"></a>概念 &amp; 生成過程</h3><p>在區塊鏈中，錢包地址和私鑰是成對存在的。錢包地址可以公開分享給他人，用於接收加密貨幣，而私鑰則是保密的，用於對加密貨幣進行簽章和控制。</p>
-<p><strong>錢包地址和私鑰的生成過程 :</strong> </p>
-<ol>
-<li>隨機生成一個 256 位的隨機數（也稱為種子）。這個種子可以使用隨機數生成器生成，也可以由使用者提供。</li>
-<li>將這個種子輸入到一個稱為雜湊函數（ex : SHA-256）中，以生成一個 256 位的雜湊值。</li>
-<li>將這個雜湊值作為一個隨機數輸入到另一個稱為橢圓曲線加密（Elliptic Curve Cryptography，ECC）的演算法中，以生成一個 512 位的金鑰對。這個金鑰對包括一個私鑰和一個公鑰。</li>
-<li>公鑰被用作錢包地址，經過一些計算和格式化過程，例如 Base58 編碼，以生成一個可讀的字串形式的錢包地址。</li>
-<li>私鑰被保留在使用者的錢包中，用於對加密貨幣進行簽章和控制。</li>
-</ol>
+        <h3 id="Merkle-Tree"><a href="#Merkle-Tree" class="headerlink" title="Merkle Tree"></a>Merkle Tree</h3><ul>
+<li>區塊鏈中用於驗證交易數據的加密技術。</li>
+<li>是一種二元樹，其中每個葉子節點表示一個交易，每個非葉子節點表示其子節點的雜湊值。</li>
+<li>技術的基本思想是通過計算雜湊值來驗證交易數據的完整性。</li>
+</ul>
+<p><strong><font color="#FF0000">※ 在區塊鏈中，每個區塊的頂部都有一個雜湊值，該雜湊值基於所有包含在該區塊中的交易的 Merkle Tree 計算得出。因此，如果任何一個交易被修改，整個 Merkle Tree 的雜湊值都會改變，進而使得區塊頂部的雜湊值也隨之改變，從而提示節點數據的篡改。</font></strong></p>
+<p><strong><font color="#FF0000">總體而言，Merkle Tree 技術能夠有效地驗證大量交易數據的完整性，並且具有高度的安全性和效率。這也是區塊鏈技術能夠實現去中心化和可信任的重要基礎之一。</font></strong></p>
 <a id="more"></a>
-<br>
 
-<p><strong><font color="#FF0000">※ 因為私鑰是用於對加密貨幣進行簽章和控制的，所以它必須得到妥善保護，否則可能會導致加密貨幣的丟失或被盜。</font></strong></p>
+
+<h3 id="Merkle-proof"><a href="#Merkle-proof" class="headerlink" title="Merkle proof"></a>Merkle proof</h3><ul>
+<li>指通過 Merkle Tree 技術產生的證明，可以證明特定交易在區塊鏈中的存在和完整性。</li>
+</ul>
+<p><strong><font color="#FF0000">※ Merkle proof 包含了一些雜湊值，這些雜湊值由該交易的雜湊值、它所處的葉子節點，以及一些中間節點的雜湊值計算而來。通過這些雜湊值，可以通過將它們與區塊頂部的雜湊值進行比較，驗證特定的交易是否存在於該區塊中，並確認其完整性。</font></strong></p>
 <p><br><br></p>
 <h6 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻 :"></a>參考文獻 :</h6><ul>
 <li>ChatGPT</li>
@@ -228,18 +229,18 @@
   
 <nav id="article-nav">
   
-    <a href="/blog/2023/04/23/Merkle-Tree-Merkle-proof/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2023/04/26/Note-%E8%BB%9F%E9%AB%94%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Merkle Tree &amp; Merkle proof
+          Note - 軟體生命週期
         
       </div>
     </a>
   
   
-    <a href="/blog/2023/04/15/Note-Git-%E6%8C%87%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Note - Git command</div>
+    <a href="/blog/2023/04/15/%E5%8D%80%E5%A1%8A%E9%8F%88%E9%8C%A2%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">區塊鏈錢包</div>
       <i class="icon-circle-right"></i>
     </a>
   
