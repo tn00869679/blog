@@ -16,7 +16,7 @@
 <meta property="og:description" content="常見技巧 : 使用檢視和純函數 檢視函數和純函數是在智能合約中執行操作時不需要支付 gas 費用的函數。檢視函數是唯讀的函數，不會對智能合約狀態進行更改，而純函數是不會讀取或更改智能合約狀態的函數。   避免迴圈 在智能合約中使用迴圈會導致額外的 gas 費用。因此，盡可能避免使用迴圈。例如，可以使用 Solidity 的 map 和 array 類型來替代迴圈。   使用事件 在智能合約中使用事">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-03T15:08:00.000Z">
-<meta property="article:modified_time" content="2023-05-04T15:41:07.220Z">
+<meta property="article:modified_time" content="2023-05-04T16:03:42.749Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -180,49 +180,49 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="常見技巧"><a href="#常見技巧" class="headerlink" title="常見技巧 :"></a><strong>常見技巧 :</strong></h3><ol>
-<li>使用檢視和純函數<ul>
-<li>檢視函數和純函數是在智能合約中執行操作時不需要支付 gas 費用的函數。檢視函數是唯讀的函數，不會對智能合約狀態進行更改，而純函數是不會讀取或更改智能合約狀態的函數。</li>
-</ul>
+<li>使用檢視和純函數<blockquote>
+<p>檢視函數和純函數是在智能合約中執行操作時不需要支付 gas 費用的函數。檢視函數是唯讀的函數，不會對智能合約狀態進行更改，而純函數是不會讀取或更改智能合約狀態的函數。</p>
+</blockquote>
 </li>
-<li>避免迴圈<ul>
-<li>在智能合約中使用迴圈會導致額外的 gas 費用。因此，盡可能避免使用迴圈。例如，可以使用 Solidity 的 map 和 array 類型來替代迴圈。</li>
-</ul>
+<li>避免迴圈<blockquote>
+<p>在智能合約中使用迴圈會導致額外的 gas 費用。因此，盡可能避免使用迴圈。例如，可以使用 Solidity 的 map 和 array 類型來替代迴圈。</p>
+</blockquote>
 </li>
-<li>使用事件<ul>
-<li>在智能合約中使用事件可以使資料在智能合約和外部應用程式之間傳遞，而不需要支付額外的 gas 費用。</li>
-</ul>
+<li>使用事件<blockquote>
+<p>在智能合約中使用事件可以使資料在智能合約和外部應用程式之間傳遞，而不需要支付額外的 gas 費用。</p>
+</blockquote>
 </li>
-<li>避免不必要的儲存<ul>
-<li>在智能合約中儲存資料會導致額外的 gas 費用。因此，盡可能避免儲存不必要的資料。例如，可以使用檢視函數來返回計算結果，而不需要將結果儲存在智能合約中。</li>
-</ul>
+<li>避免不必要的儲存<blockquote>
+<p>在智能合約中儲存資料會導致額外的 gas 費用。因此，盡可能避免儲存不必要的資料。例如，可以使用檢視函數來返回計算結果，而不需要將結果儲存在智能合約中。</p>
+</blockquote>
 </li>
-<li>最佳化計算和演算法<ul>
-<li>盡可能使用簡單的計算和演算法來減少 gas 費用。一些常見的最佳化技巧包括快取計算結果，避免使用昂貴的加密演算法，以及使用位運算子。<a id="more"></a></li>
-</ul>
+<li>最佳化計算和演算法<blockquote>
+<p>盡可能使用簡單的計算和演算法來減少 gas 費用。一些常見的最佳化技巧包括快取計算結果，避免使用昂貴的加密演算法，以及使用位運算子。</p>
+</blockquote>
+<a id="more"></a></li>
+<li>使用 struct<blockquote>
+<p>使用 struct 可以減少在智能合約中儲存的變數數量，從而降低 gas 費用。使用 struct 也可以使程式碼更加可讀和易於維護。</p>
+</blockquote>
 </li>
-<li>使用 struct<ul>
-<li>使用 struct 可以減少在智能合約中儲存的變數數量，從而降低 gas 費用。使用 struct 也可以使程式碼更加可讀和易於維護。</li>
-</ul>
+<li>使用 require 和 assert<blockquote>
+<p>使用 require 和 assert 語句可以減少在智能合約中執行錯誤操作的可能性，並且可以減少 gas 費用。在呼叫函數之前，使用 require 語句檢查輸入參數和狀態，以確保函數的安全性。在函數執行後，使用 assert 語句檢查結果是否符合預期。</p>
+</blockquote>
 </li>
-<li>使用 require 和 assert<ul>
-<li>使用 require 和 assert 語句可以減少在智能合約中執行錯誤操作的可能性，並且可以減少 gas 費用。在呼叫函數之前，使用 require 語句檢查輸入參數和狀態，以確保函數的安全性。在函數執行後，使用 assert 語句檢查結果是否符合預期。</li>
-</ul>
+<li>合併交易<blockquote>
+<p>在同一塊中執行多個交易會導致額外的 gas 費用。因此，可以將多個交易合併為一個交易來減少 gas 費用。可以使用 Solidity 的 batchTransfer 函數來合併多個轉帳交易，以減少 gas 費用。</p>
+</blockquote>
 </li>
-<li>合併交易<ul>
-<li>在同一塊中執行多個交易會導致額外的 gas 費用。因此，可以將多個交易合併為一個交易來減少 gas 費用。可以使用 Solidity 的 batchTransfer 函數來合併多個轉帳交易，以減少 gas 費用。</li>
-</ul>
+<li>使用 assembly (<strong><font color="#FF0000">目前不推薦</font></strong>)<blockquote>
+<p>在某些情況下，使用 assembly 可以使智能合約更高效。assembly 可以使智能合約執行更複雜的計算和操作，同時減少 gas 費用。但是，需要注意的是，assembly 可能會降低程式碼的可讀性和可維護性。</p>
+</blockquote>
 </li>
-<li>使用 assembly (<strong><font color="#FF0000">目前不推薦</font></strong>)<ul>
-<li>在某些情況下，使用 assembly 可以使智能合約更高效。assembly 可以使智能合約執行更複雜的計算和操作，同時減少 gas 費用。但是，需要注意的是，assembly 可能會降低程式碼的可讀性和可維護性。</li>
-</ul>
+<li>避免使用過多的 if 語句<blockquote>
+<p>在智能合約中使用過多的 if 語句會導致額外的 gas 費用。因此，應盡可能避免使用過多的 if 語句。可以使用 switch 語句和位運算子等替代 if 語句，以減少 gas 費用。</p>
+</blockquote>
 </li>
-<li>避免使用過多的 if 語句<ul>
-<li>在智能合約中使用過多的 if 語句會導致額外的 gas 費用。因此，應盡可能避免使用過多的 if 語句。可以使用 switch 語句和位運算子等替代 if 語句，以減少 gas 費用。</li>
-</ul>
-</li>
-<li>避免使用複雜的資料類型<ul>
-<li>在智能合約中使用複雜的資料類型會導致額外的 gas 費用。因此，應盡可能避免使用複雜的資料類型。可以使用簡單的資料類型，如 uint 和 bool 等，以減少 gas 費用。</li>
-</ul>
+<li>避免使用複雜的資料類型<blockquote>
+<p>在智能合約中使用複雜的資料類型會導致額外的 gas 費用。因此，應盡可能避免使用複雜的資料類型。可以使用簡單的資料類型，如 uint 和 bool 等，以減少 gas 費用。</p>
+</blockquote>
 </li>
 </ol>
 <p><br><br></p>
