@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>Archives: 2020/1 | Darren&#39;s blog</title>
+  <title>智能合約減少 gas 的技巧 | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Darren&#39;s blog">
-<meta property="og:url" content="https://tn00869679.github.io/blog/archives/2020/01/index.html">
+  <meta name="description" content="常見技巧 : 使用檢視和純函數 檢視函數和純函數是在智能合約中執行操作時不需要支付 gas 費用的函數。檢視函數是唯讀的函數，不會對智能合約狀態進行更改，而純函數是不會讀取或更改智能合約狀態的函數。   避免迴圈 在智能合約中使用迴圈會導致額外的 gas 費用。因此，盡可能避免使用迴圈。例如，可以使用 Solidity 的 map 和 array 類型來替代迴圈。   使用事件 在智能合約中使用事">
+<meta property="og:type" content="article">
+<meta property="og:title" content="智能合約減少 gas 的技巧">
+<meta property="og:url" content="https://tn00869679.github.io/blog/2023/05/03/%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84%E6%B8%9B%E5%B0%91-gas-%E6%8A%80%E5%B7%A7/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
+<meta property="og:description" content="常見技巧 : 使用檢視和純函數 檢視函數和純函數是在智能合約中執行操作時不需要支付 gas 費用的函數。檢視函數是唯讀的函數，不會對智能合約狀態進行更改，而純函數是不會讀取或更改智能合約狀態的函數。   避免迴圈 在智能合約中使用迴圈會導致額外的 gas 費用。因此，盡可能避免使用迴圈。例如，可以使用 Solidity 的 map 和 array 類型來替代迴圈。   使用事件 在智能合約中使用事">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-03T15:08:00.000Z">
+<meta property="article:modified_time" content="2023-05-04T15:41:07.220Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -155,98 +159,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-智能合約減少-gas-技巧" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2020/01/07/ReadSkills/" class="archive-article-date">
-  	<time datetime="2020-01-06T16:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2020/01/07/ReadSkills/">How To Read The Books</a>
+    <h1 class="article-title" itemprop="name">
+      智能合約減少 gas 的技巧
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/blog/2023/05/03/%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84%E6%B8%9B%E5%B0%91-gas-%E6%8A%80%E5%B7%A7/" class="archive-article-date">
+  	<time datetime="2023-05-03T15:08:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="常見技巧"><a href="#常見技巧" class="headerlink" title="常見技巧 :"></a><strong>常見技巧 :</strong></h3><ol>
+<li>使用檢視和純函數<ul>
+<li>檢視函數和純函數是在智能合約中執行操作時不需要支付 gas 費用的函數。檢視函數是唯讀的函數，不會對智能合約狀態進行更改，而純函數是不會讀取或更改智能合約狀態的函數。</li>
+</ul>
+</li>
+<li>避免迴圈<ul>
+<li>在智能合約中使用迴圈會導致額外的 gas 費用。因此，盡可能避免使用迴圈。例如，可以使用 Solidity 的 map 和 array 類型來替代迴圈。</li>
+</ul>
+</li>
+<li>使用事件<ul>
+<li>在智能合約中使用事件可以使資料在智能合約和外部應用程式之間傳遞，而不需要支付額外的 gas 費用。</li>
+</ul>
+</li>
+<li>避免不必要的儲存<ul>
+<li>在智能合約中儲存資料會導致額外的 gas 費用。因此，盡可能避免儲存不必要的資料。例如，可以使用檢視函數來返回計算結果，而不需要將結果儲存在智能合約中。</li>
+</ul>
+</li>
+<li>最佳化計算和演算法<ul>
+<li>盡可能使用簡單的計算和演算法來減少 gas 費用。一些常見的最佳化技巧包括快取計算結果，避免使用昂貴的加密演算法，以及使用位運算子。<a id="more"></a></li>
+</ul>
+</li>
+<li>使用 struct<ul>
+<li>使用 struct 可以減少在智能合約中儲存的變數數量，從而降低 gas 費用。使用 struct 也可以使程式碼更加可讀和易於維護。</li>
+</ul>
+</li>
+<li>使用 require 和 assert<ul>
+<li>使用 require 和 assert 語句可以減少在智能合約中執行錯誤操作的可能性，並且可以減少 gas 費用。在呼叫函數之前，使用 require 語句檢查輸入參數和狀態，以確保函數的安全性。在函數執行後，使用 assert 語句檢查結果是否符合預期。</li>
+</ul>
+</li>
+<li>合併交易<ul>
+<li>在同一塊中執行多個交易會導致額外的 gas 費用。因此，可以將多個交易合併為一個交易來減少 gas 費用。可以使用 Solidity 的 batchTransfer 函數來合併多個轉帳交易，以減少 gas 費用。</li>
+</ul>
+</li>
+<li>使用 assembly (<strong><font color="#FF0000">目前不推薦</font></strong>)<ul>
+<li>在某些情況下，使用 assembly 可以使智能合約更高效。assembly 可以使智能合約執行更複雜的計算和操作，同時減少 gas 費用。但是，需要注意的是，assembly 可能會降低程式碼的可讀性和可維護性。</li>
+</ul>
+</li>
+<li>避免使用過多的 if 語句<ul>
+<li>在智能合約中使用過多的 if 語句會導致額外的 gas 費用。因此，應盡可能避免使用過多的 if 語句。可以使用 switch 語句和位運算子等替代 if 語句，以減少 gas 費用。</li>
+</ul>
+</li>
+<li>避免使用複雜的資料類型<ul>
+<li>在智能合約中使用複雜的資料類型會導致額外的 gas 費用。因此，應盡可能避免使用複雜的資料類型。可以使用簡單的資料類型，如 uint 和 bool 等，以減少 gas 費用。</li>
+</ul>
+</li>
+</ol>
+<p><br><br></p>
+<h6 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻 :"></a>參考文獻 :</h6><ul>
+<li>ChatGPT</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/extracurricular//" class="article-tag-list-link color1">extracurricular</a>
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2020/01/06/hello-world/" class="archive-article-date">
-  	<time datetime="2020-01-05T16:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2023/04/26/Note-%E8%BB%9F%E9%AB%94%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Note - 軟體生命週期</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2020/01/06/hello-world/">Hello hexo blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/otherknowledge//" class="article-tag-list-link color5">otherknowledge</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -269,8 +319,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
