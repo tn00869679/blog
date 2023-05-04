@@ -16,7 +16,7 @@
 <meta property="og:description" content="常見技巧 : 使用檢視和純函數 檢視函數和純函數是在智能合約中執行操作時不需要支付 gas 費用的函數。檢視函數是唯讀的函數，不會對智能合約狀態進行更改，而純函數是不會讀取或更改智能合約狀態的函數。   避免迴圈 在智能合約中使用迴圈會導致額外的 gas 費用。因此，盡可能避免使用迴圈。例如，可以使用 Solidity 的 map 和 array 類型來替代迴圈。   使用事件 在智能合約中使用事">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-03T15:08:00.000Z">
-<meta property="article:modified_time" content="2023-05-04T16:03:42.749Z">
+<meta property="article:modified_time" content="2023-05-04T16:50:55.446Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -222,6 +222,10 @@
 </li>
 <li>避免使用複雜的資料類型<blockquote>
 <p>在智能合約中使用複雜的資料類型會導致額外的 gas 費用。因此，應盡可能避免使用複雜的資料類型。可以使用簡單的資料類型，如 uint 和 bool 等，以減少 gas 費用。</p>
+</blockquote>
+</li>
+<li>使用代理合約<blockquote>
+<p>代理合約可以批次處理多個交易，從而減少交易的數量和 gas 費用。</p>
 </blockquote>
 </li>
 </ol>
