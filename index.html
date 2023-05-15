@@ -66,7 +66,7 @@
 			</ul>
 		</nav>
                 <nav>
-                    總文章數 :  17
+                    總文章數 :  18
                 </nav>
 		<nav class="header-smart-menu">
     		
@@ -156,6 +156,86 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-坎昆升級-EIP-4844" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2023/05/16/%E5%9D%8E%E6%98%86%E5%8D%87%E7%B4%9A-EIP-4844/">坎昆升級 (EIP-4844)</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2023/05/16/%E5%9D%8E%E6%98%86%E5%8D%87%E7%B4%9A-EIP-4844/" class="archive-article-date">
+  	<time datetime="2023-05-15T16:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="EIP-4844"><a href="#EIP-4844" class="headerlink" title="EIP-4844"></a>EIP-4844</h3><p><strong><font color="#FF0000">目前透過 rollup 鏈 (Arbitrum, Optimism) 解決可擴充性問題，不過由於底層 Layer-1 鏈的設計架構導致仍然過於昂貴和緩慢，因此做出以下更新 : </font></strong></p>
+<ul>
+<li>新增將區塊鏈網路劃分為不同的資料庫 (分片)，以增加以太坊交易的空間。</li>
+<li>以太坊區塊容量從 50-100KB 增加至 1-2 MB，使 rollup 鏈的成本降低為 1/10 至 1/20。</li>
+<li>「 blob-carrying transactions 」的空間也隨之增加，節點驗證器則採用 「資料可用性抽樣」 技術來隨機抽樣驗證，就無需實際下載所有資料，以降低節點負擔。</li>
+</ul>
+<p><br><br><br><font color="#FF0000">※</font> <strong>資料可用性抽樣</strong> 原理 : 當一個節點收到一個新的區塊時，它不會立即下載整個區塊，而是先隨機抽樣區塊中的一部分數據，然後它會詢問網絡中的其他節點來驗證這部分數據的有效性，如果網絡中的大多數節點都確認這些數據是有效的，那麼這個節點就可以確定整個區塊的數據是可用的，然後再下載和驗證整個區塊。這種技術可以防止”<strong>壞節點</strong>“發送包含無效或不完整數據的區塊，並且可以在不需要下載和驗證整個區塊的情況下快速確定區塊數據的可用性，從而提高了區塊鏈的效率和可擴展性。 (此技術主要用於 PoS)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2023/05/16/%E5%9D%8E%E6%98%86%E5%8D%87%E7%B4%9A-EIP-4844/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-智能合約減少-gas-技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -936,94 +1016,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2021/03/30/Cookie-Session-%E7%9A%84%E5%B7%AE%E7%95%B0/">展開全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Note-–-Git-操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/">Note – Git 操作</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2021-03-29T16:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Git-操作"><a href="#Git-操作" class="headerlink" title="Git 操作"></a>Git 操作</h3><p><strong>type 只允許使用以下類別 ：</strong></p>
-<ul>
-<li>feat: 新增/修改功能 (feature)。</li>
-<li>fix: 修補 bug (bug fix)。</li>
-<li>docs: 文件 (documentation)。</li>
-<li>style: 格式 (不影響程式碼運行的變動 white-space, formatting, missing semi colons, etc)。</li>
-<li>refactor: 重構 (既不是新增功能，也不是修補 bug 的程式碼變動)。</li>
-<li>perf: 改善效能 (A code change that improves performance)。</li>
-<li>test: 增加測試 (when adding missing tests)。</li>
-<li>chore: 建構程序或輔助工具的變動 (maintain)。</li>
-<li>revert: 撤銷回覆先前的 commit 例如：revert: type(scope): subject (回覆版本：xxxx)。</li>
-</ul>
-<p><strong><u>type 是用來告訴進行 Code Review 的人應該以什麼角度來檢視 Commit 內容。</u></strong></p>
-        
-          <a class="article-more-a" href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2021/03/30/Note-%E2%80%93-Git-%E6%93%8D%E4%BD%9C/">展開全文 >></a>
         </p>
       
 
