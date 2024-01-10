@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>區塊鏈常見共識機制 | Darren&#39;s blog</title>
+  <title>Factory Pattern | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常見共識機制工作量證明（Proof of Work，PoW） :  PoW 是比特幣採用的共識機制，也是最早應用的共識機制之一。該機制通過計算難解的數學問題來獲得區塊的記帳權，獲得記帳權的節點將獲得一定數量的比特幣作為獎勵。PoW 機制需要大量的計算資源，因此會造成能源浪費和環境污染等問題。  股權證明（Proof of Stake，PoS） :  PoS 是一種新型的共識機制，相比 PoW 更加">
+  <meta name="description" content="Factory PatternDefine 123456type BeverageType stringconst (	tea    BeverageType &#x3D; &quot;tea&quot;	coffee BeverageType &#x3D; &quot;coffee&quot;)  Interface 1234567type Beverage interface &amp;#123;	GetSweetnessLevel() string	SetS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="區塊鏈常見共識機制">
-<meta property="og:url" content="https://tn00869679.github.io/blog/2023/04/14/%E5%8D%80%E5%A1%8A%E9%8F%88%E5%B8%B8%E8%A6%8B%E5%85%B1%E8%AD%98%E6%A9%9F%E5%88%B6/index.html">
+<meta property="og:title" content="Factory Pattern">
+<meta property="og:url" content="https://tn00869679.github.io/blog/2024/01/08/Factory-Pattern/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
-<meta property="og:description" content="常見共識機制工作量證明（Proof of Work，PoW） :  PoW 是比特幣採用的共識機制，也是最早應用的共識機制之一。該機制通過計算難解的數學問題來獲得區塊的記帳權，獲得記帳權的節點將獲得一定數量的比特幣作為獎勵。PoW 機制需要大量的計算資源，因此會造成能源浪費和環境污染等問題。  股權證明（Proof of Stake，PoS） :  PoS 是一種新型的共識機制，相比 PoW 更加">
+<meta property="og:description" content="Factory PatternDefine 123456type BeverageType stringconst (	tea    BeverageType &#x3D; &quot;tea&quot;	coffee BeverageType &#x3D; &quot;coffee&quot;)  Interface 1234567type Beverage interface &amp;#123;	GetSweetnessLevel() string	SetS">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-04-14T15:40:00.000Z">
-<meta property="article:modified_time" content="2023-04-14T15:41:50.642Z">
+<meta property="article:published_time" content="2024-01-08T15:49:00.000Z">
+<meta property="article:modified_time" content="2024-01-10T16:58:30.170Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -163,43 +163,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-區塊鏈常見共識機制" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Factory-Pattern" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      區塊鏈常見共識機制
+      Factory Pattern
     </h1>
   
 
         
-        <a href="/blog/2023/04/14/%E5%8D%80%E5%A1%8A%E9%8F%88%E5%B8%B8%E8%A6%8B%E5%85%B1%E8%AD%98%E6%A9%9F%E5%88%B6/" class="archive-article-date">
-  	<time datetime="2023-04-14T15:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-14</time>
+        <a href="/blog/2024/01/08/Factory-Pattern/" class="archive-article-date">
+  	<time datetime="2024-01-08T15:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="常見共識機制"><a href="#常見共識機制" class="headerlink" title="常見共識機制"></a>常見共識機制</h3><p><strong>工作量證明（Proof of Work，PoW） :</strong></p>
-<ul>
-<li>PoW 是比特幣採用的共識機制，也是最早應用的共識機制之一。該機制通過計算難解的數學問題來獲得區塊的記帳權，獲得記帳權的節點將獲得一定數量的比特幣作為獎勵。PoW 機制需要大量的計算資源，因此會造成能源浪費和環境污染等問題。</li>
-</ul>
-<p><strong>股權證明（Proof of Stake，PoS） :</strong></p>
-<ul>
-<li>PoS 是一種新型的共識機制，相比 PoW 更加節能環保。該機制通過節點持有的幣數來獲得記帳權，持有的幣數越多，獲得記帳權的機率越高。PoS 機制還可以通過懲罰機制來約束節點的行為，確保網路的穩定性。</li>
-</ul>
-<p><strong>權威證明（Proof of Authority，PoA） :</strong></p>
-<ul>
-<li>PoA 是一種基於信任的共識機制，適用於私有鏈和聯盟鏈等場景。該機制通過預先指定一些節點來獲得記帳權，這些節點被稱為 “權威節點”，它們的身份得到了充分的驗證和信任。PoA 機制具有高效、安全、可控等優點，但需要節點身份的信任和驗證。</li>
-</ul>
-<p><strong>實用性證明（Proof of Useful Work，PoUW） :</strong></p>
-<ul>
-<li>PoUW 是一種結合了 PoW 和 PoS 機制的新型共識機制。該機制通過節點提供有用的計算和儲存資源來獲得記帳權，這些資源可以被其他使用者所利用，從而提高網路的效率和可靠性。PoUW 機制還可以通過激勵機制來鼓勵節點提供更多的計算和儲存資源。</li>
-</ul>
+        <h3 id="Factory-Pattern"><a href="#Factory-Pattern" class="headerlink" title="Factory Pattern"></a>Factory Pattern</h3><p>Define</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> BeverageType <span class="keyword">string</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	tea    BeverageType = <span class="string">"tea"</span></span><br><span class="line">	coffee BeverageType = <span class="string">"coffee"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
+<p>Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Beverage <span class="keyword">interface</span> &#123;</span><br><span class="line">	GetSweetnessLevel() <span class="keyword">string</span></span><br><span class="line">	SetSweetnessLevel(percent <span class="keyword">int</span>)</span><br><span class="line">	HasCaffeine() <span class="keyword">bool</span></span><br><span class="line">	SetCaffeine(hasCaffeine <span class="keyword">bool</span>)</span><br><span class="line">	GetDescription() <span class="keyword">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<a id="more"></a>
+
+
+<p>BeverageA (tea)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Tea <span class="keyword">struct</span> &#123;</span><br><span class="line">	sweetnessLevel <span class="keyword">int</span></span><br><span class="line">	hasCaffeine    <span class="keyword">bool</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Tea)</span> <span class="title">GetSweetnessLevel</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> fmt.Sprintf(<span class="string">"%d percent sugar"</span>, beverage.sweetnessLevel)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Tea)</span> <span class="title">SetSweetnessLevel</span><span class="params">(percent <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	beverage.sweetnessLevel = percent</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Tea)</span> <span class="title">HasCaffeine</span><span class="params">()</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> beverage.hasCaffeine</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Tea)</span> <span class="title">SetCaffeine</span><span class="params">(hasCaffeine <span class="keyword">bool</span>)</span></span> &#123;</span><br><span class="line">	beverage.hasCaffeine = hasCaffeine</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Tea)</span> <span class="title">GetDescription</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"Green tea"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>BeverageB (coffee)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Coffee <span class="keyword">struct</span> &#123;</span><br><span class="line">	sweetnessLevel <span class="keyword">int</span></span><br><span class="line">	hasCaffeine    <span class="keyword">bool</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Coffee)</span> <span class="title">GetSweetnessLevel</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> fmt.Sprintf(<span class="string">"%d percent sugar"</span>, beverage.sweetnessLevel)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Coffee)</span> <span class="title">SetSweetnessLevel</span><span class="params">(percent <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	beverage.sweetnessLevel = percent</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Coffee)</span> <span class="title">HasCaffeine</span><span class="params">()</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> beverage.hasCaffeine</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Coffee)</span> <span class="title">SetCaffeine</span><span class="params">(hasCaffeine <span class="keyword">bool</span>)</span></span> &#123;</span><br><span class="line">	beverage.hasCaffeine = hasCaffeine</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(beverage *Coffee)</span> <span class="title">GetDescription</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"Latte"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>BeverageFactory</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BeverageFactory</span><span class="params">(beverageType BeverageType, sweetnessLevel <span class="keyword">int</span>, hasCaffeine <span class="keyword">bool</span>)</span> <span class="title">Beverage</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> beverage Beverage</span><br><span class="line">	<span class="keyword">switch</span> beverageType &#123;</span><br><span class="line">	<span class="keyword">case</span> tea:</span><br><span class="line">		beverage = &amp;Tea&#123;&#125;</span><br><span class="line">	<span class="keyword">case</span> coffee:</span><br><span class="line">		beverage = &amp;Coffee&#123;&#125;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	beverage.SetSweetnessLevel(sweetnessLevel)</span><br><span class="line">	beverage.SetCaffeine(hasCaffeine)</span><br><span class="line">	<span class="keyword">return</span> beverage</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>執行</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	beverageASweetnessLevel := <span class="number">30</span></span><br><span class="line">	beverageA := BeverageFactory(tea, beverageASweetnessLevel, <span class="literal">false</span>)</span><br><span class="line">	<span class="keyword">if</span> beverageA == <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">"Unknown beverageA type"</span>)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">"Ordered: %s\n"</span>, beverageA.GetDescription())</span><br><span class="line">		fmt.Println(beverageA.GetSweetnessLevel())</span><br><span class="line">		fmt.Println(beverageA.HasCaffeine())</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	beverageBSweetnessLevel := <span class="number">50</span></span><br><span class="line">	beverageB := BeverageFactory(coffee, beverageBSweetnessLevel, <span class="literal">true</span>)</span><br><span class="line">	<span class="keyword">if</span> beverageB == <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">"Unknown beverageB type"</span>)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">"Ordered: %s\n"</span>, beverageB.GetDescription())</span><br><span class="line">		fmt.Println(beverageB.GetSweetnessLevel())</span><br><span class="line">		fmt.Println(beverageB.HasCaffeine())</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -231,18 +235,9 @@
   
 <nav id="article-nav">
   
-    <a href="/blog/2023/04/15/Note-Git-%E6%8C%87%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Note - Git command
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2023/04/14/SOLID-%E5%8E%9F%E5%89%87/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SOLID 原則</div>
+    <a href="/blog/2024/01/08/Decorator-Pattern/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Decorator Pattern</div>
       <i class="icon-circle-right"></i>
     </a>
   

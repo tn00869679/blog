@@ -66,7 +66,7 @@
 			</ul>
 		</nav>
                 <nav>
-                    總文章數 :  20
+                    總文章數 :  21
                 </nav>
 		<nav class="header-smart-menu">
     		
@@ -160,6 +160,86 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Factory-Pattern" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2024/01/08/Factory-Pattern/">Factory Pattern</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2024/01/08/Factory-Pattern/" class="archive-article-date">
+  	<time datetime="2024-01-08T15:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Factory-Pattern"><a href="#Factory-Pattern" class="headerlink" title="Factory Pattern"></a>Factory Pattern</h3><p>Define</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> BeverageType <span class="keyword">string</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	tea    BeverageType = <span class="string">"tea"</span></span><br><span class="line">	coffee BeverageType = <span class="string">"coffee"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Beverage <span class="keyword">interface</span> &#123;</span><br><span class="line">	GetSweetnessLevel() <span class="keyword">string</span></span><br><span class="line">	SetSweetnessLevel(percent <span class="keyword">int</span>)</span><br><span class="line">	HasCaffeine() <span class="keyword">bool</span></span><br><span class="line">	SetCaffeine(hasCaffeine <span class="keyword">bool</span>)</span><br><span class="line">	GetDescription() <span class="keyword">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/blog/2024/01/08/Factory-Pattern/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2024/01/08/Factory-Pattern/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Decorator-Pattern" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -954,93 +1034,9 @@
 
 
   
-    <article id="post-SOLID-原則" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2023/04/14/SOLID-%E5%8E%9F%E5%89%87/">SOLID 原則</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2023/04/14/SOLID-%E5%8E%9F%E5%89%87/" class="archive-article-date">
-  	<time datetime="2023-04-14T15:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="SOLID"><a href="#SOLID" class="headerlink" title="SOLID"></a>SOLID</h3><p><strong><font color="#FF0000">目的是讓開發者或管理者在面對程式碼需要改變時，能有一套策略來應對。</font></strong></p>
-<p><strong>Uncle Bob (Clean Code 作者) 提出了 5 個設計原則 :</strong></p>
-<ul>
-<li>單一職責原則（The Single Responsibility Principle, 簡稱 SRP)</li>
-<li>開放-封閉原則 (The Open-Close Principle, 簡稱 OCP)</li>
-<li>里氏替換原則 (The Liskov Substitution Principle, 簡稱 LSP)</li>
-<li>接口隔離原則 (Interface Segregation Principle, 簡稱 ISP)</li>
-<li>依賴反轉原則 (The Dependency Inversion Principle, 簡稱 DIP)</li>
-</ul>
-        
-          <a class="article-more-a" href="/blog/2023/04/14/SOLID-%E5%8E%9F%E5%89%87/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2023/04/14/SOLID-%E5%8E%9F%E5%89%87/">展開全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
