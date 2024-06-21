@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>區塊鏈錢包 | Darren&#39;s blog</title>
+  <title>Abstract Factory Pattern | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概念 &amp; 生成過程在區塊鏈中，錢包地址和私鑰是成對存在的。錢包地址可以公開分享給他人，用於接收加密貨幣，而私鑰則是保密的，用於對加密貨幣進行簽章和控制。 錢包地址和私鑰的生成過程 :   隨機生成一個 256 位的隨機數（也稱為種子）。這個種子可以使用隨機數生成器生成，也可以由使用者提供。 將這個種子輸入到一個稱為雜湊函數（ex : SHA-256）中，以生成一個 256 位的雜湊值。 將">
+  <meta name="description" content="Abstract Factory Pattern※ 情境 : 如果程式碼需要與多個不同系列的相關產品互動， 但是由於無法提前獲取相關資訊， 或者出於對未來擴展性的考慮， 你不希望程式碼基於產品的具體類進行建構， 在這種情況下， 你可以使用抽象工廠。 Interface 1234567891011121314type Shirts interface &amp;#123;	HasSleeves()	Suit">
 <meta property="og:type" content="article">
-<meta property="og:title" content="區塊鏈錢包">
-<meta property="og:url" content="https://tn00869679.github.io/blog/2023/04/15/%E5%8D%80%E5%A1%8A%E9%8F%88%E9%8C%A2%E5%8C%85/index.html">
+<meta property="og:title" content="Abstract Factory Pattern">
+<meta property="og:url" content="https://tn00869679.github.io/blog/2024/06/20/Abstract-Factory-Pattern/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
-<meta property="og:description" content="概念 &amp; 生成過程在區塊鏈中，錢包地址和私鑰是成對存在的。錢包地址可以公開分享給他人，用於接收加密貨幣，而私鑰則是保密的，用於對加密貨幣進行簽章和控制。 錢包地址和私鑰的生成過程 :   隨機生成一個 256 位的隨機數（也稱為種子）。這個種子可以使用隨機數生成器生成，也可以由使用者提供。 將這個種子輸入到一個稱為雜湊函數（ex : SHA-256）中，以生成一個 256 位的雜湊值。 將">
+<meta property="og:description" content="Abstract Factory Pattern※ 情境 : 如果程式碼需要與多個不同系列的相關產品互動， 但是由於無法提前獲取相關資訊， 或者出於對未來擴展性的考慮， 你不希望程式碼基於產品的具體類進行建構， 在這種情況下， 你可以使用抽象工廠。 Interface 1234567891011121314type Shirts interface &amp;#123;	HasSleeves()	Suit">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-04-15T06:04:00.000Z">
-<meta property="article:modified_time" content="2023-05-05T13:58:47.039Z">
+<meta property="article:published_time" content="2024-06-20T06:02:00.000Z">
+<meta property="article:modified_time" content="2024-06-21T06:03:02.998Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -163,40 +163,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-區塊鏈錢包" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Abstract-Factory-Pattern" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      區塊鏈錢包
+      Abstract Factory Pattern
     </h1>
   
 
         
-        <a href="/blog/2023/04/15/%E5%8D%80%E5%A1%8A%E9%8F%88%E9%8C%A2%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2023-04-15T06:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-15</time>
+        <a href="/blog/2024/06/20/Abstract-Factory-Pattern/" class="archive-article-date">
+  	<time datetime="2024-06-20T06:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-06-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="概念-amp-生成過程"><a href="#概念-amp-生成過程" class="headerlink" title="概念 &amp; 生成過程"></a>概念 &amp; 生成過程</h3><p>在區塊鏈中，錢包地址和私鑰是成對存在的。錢包地址可以公開分享給他人，用於接收加密貨幣，而私鑰則是保密的，用於對加密貨幣進行簽章和控制。</p>
-<p><strong>錢包地址和私鑰的生成過程 :</strong> </p>
-<ol>
-<li>隨機生成一個 256 位的隨機數（也稱為種子）。這個種子可以使用隨機數生成器生成，也可以由使用者提供。</li>
-<li>將這個種子輸入到一個稱為雜湊函數（ex : SHA-256）中，以生成一個 256 位的雜湊值。</li>
-<li>將這個雜湊值作為一個隨機數輸入到另一個稱為橢圓曲線加密（Elliptic Curve Cryptography，ECC）的演算法中，以生成一個 512 位的金鑰對。這個金鑰對包括一個私鑰和一個公鑰。</li>
-<li>公鑰被用作錢包地址，經過一些計算和格式化過程，例如 Base58 編碼，以生成一個可讀的字串形式的錢包地址。</li>
-<li>私鑰被保留在使用者的錢包中，用於對加密貨幣進行簽章和控制。</li>
-</ol>
+        <h3 id="Abstract-Factory-Pattern"><a href="#Abstract-Factory-Pattern" class="headerlink" title="Abstract Factory Pattern"></a>Abstract Factory Pattern</h3><p><strong><font color="#FF0000">※ 情境 : 如果程式碼需要與多個不同系列的相關產品互動， 但是由於無法提前獲取相關資訊， 或者出於對未來擴展性的考慮， 你不希望程式碼基於產品的具體類進行建構， 在這種情況下， 你可以使用抽象工廠。</font></strong></p>
+<p>Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Shirts <span class="keyword">interface</span> &#123;</span><br><span class="line">	HasSleeves()</span><br><span class="line">	SuitableFor()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Pants <span class="keyword">interface</span> &#123;</span><br><span class="line">	FullLength()</span><br><span class="line">	SuitableFor()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ClothesFactory <span class="keyword">interface</span> &#123;</span><br><span class="line">	MakeShirts() Shirts</span><br><span class="line">	MakePants() Pants</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 <a id="more"></a>
-<br>
 
-<p><strong><font color="#FF0000">※ 因為私鑰是用於對加密貨幣進行簽章和控制的，所以它必須得到妥善保護，否則可能會導致加密貨幣的丟失或被盜。</font></strong></p>
 
+<p>Office Clothes</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> WorkShirts <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(w WorkShirts)</span> <span class="title">HasSleeves</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Yes!! long sleeves."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(w WorkShirts)</span> <span class="title">SuitableFor</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Office wear."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> WorkPants <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(w WorkPants)</span> <span class="title">FullLength</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Pants of 100 cm."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(w WorkPants)</span> <span class="title">SuitableFor</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Office wear."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Home Clothes</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> VacationShirts <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(v VacationShirts)</span> <span class="title">HasSleeves</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"No!! no sleeves."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(v VacationShirts)</span> <span class="title">SuitableFor</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Home wear."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> VacationPants <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(v VacationPants)</span> <span class="title">FullLength</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Pants of 50 cm."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(v VacationPants)</span> <span class="title">SuitableFor</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Home wear."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Office Factory</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> OfficeFactory <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(o *OfficeFactory)</span> <span class="title">MakeShirts</span><span class="params">()</span> <span class="title">Shirts</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> WorkShirts&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(o *OfficeFactory)</span> <span class="title">MakePants</span><span class="params">()</span> <span class="title">Pants</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> WorkPants&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Home Factory</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> HomeFactory <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(h *HomeFactory)</span> <span class="title">MakeShirts</span><span class="params">()</span> <span class="title">Shirts</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> VacationShirts&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(h *HomeFactory)</span> <span class="title">MakePants</span><span class="params">()</span> <span class="title">Pants</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> VacationPants&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Test</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"DesignPatterns/AbstractFactoryPattern"</span></span><br><span class="line">	<span class="string">"testing"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestAbstractFactoryPattern</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> factory AbstractFactoryPattern.ClothesFactory</span><br><span class="line"></span><br><span class="line">	clothesStyle := buyClothes()</span><br><span class="line">	<span class="keyword">switch</span> clothesStyle &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"Office"</span>:</span><br><span class="line">		factory = &amp;AbstractFactoryPattern.OfficeFactory&#123;&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"Home"</span>:</span><br><span class="line">		factory = &amp;AbstractFactoryPattern.HomeFactory&#123;&#125;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">"Undefined clothes style"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	shirts := factory.MakeShirts()</span><br><span class="line">	shirts.HasSleeves()</span><br><span class="line">	shirts.SuitableFor()</span><br><span class="line"></span><br><span class="line">	pants := factory.MakePants()</span><br><span class="line">	pants.FullLength()</span><br><span class="line">	pants.SuitableFor()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">buyClothes</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"Home"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -228,18 +236,9 @@
   
 <nav id="article-nav">
   
-    <a href="/blog/2023/04/23/Merkle-Tree-Merkle-proof/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Merkle Tree &amp; Merkle proof
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2023/04/15/Note-Git-%E6%8C%87%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Note - Git command</div>
+    <a href="/blog/2024/01/08/Factory-Pattern/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Factory Method Pattern</div>
       <i class="icon-circle-right"></i>
     </a>
   
