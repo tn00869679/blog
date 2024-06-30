@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>Category: extracurricular | Darren&#39;s blog</title>
+  <title>Strategy Pattern | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Darren&#39;s blog">
-<meta property="og:url" content="https://tn00869679.github.io/blog/categories/extracurricular/index.html">
+  <meta name="description" content="Strategy Pattern※ 情境 : 當有許多僅在執行某些行為時略有不同的相似類時，可使用策略模式。 Interface 123type Transportation interface &amp;#123;	travel()&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Strategy Pattern">
+<meta property="og:url" content="https://tn00869679.github.io/blog/2024/06/30/Strategy-Pattern/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
+<meta property="og:description" content="Strategy Pattern※ 情境 : 當有許多僅在執行某些行為時略有不同的相似類時，可使用策略模式。 Interface 123type Transportation interface &amp;#123;	travel()&amp;#125;">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-06-30T13:54:00.000Z">
+<meta property="article:modified_time" content="2024-06-30T16:09:16.972Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -171,61 +175,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Strategy-Pattern" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2020/01/07/ReadSkills/" class="archive-article-date">
-  	<time datetime="2020-01-06T16:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2020/01/07/ReadSkills/">How To Read The Books</a>
+    <h1 class="article-title" itemprop="name">
+      Strategy Pattern
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/blog/2024/06/30/Strategy-Pattern/" class="archive-article-date">
+  	<time datetime="2024-06-30T13:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Strategy-Pattern"><a href="#Strategy-Pattern" class="headerlink" title="Strategy Pattern"></a>Strategy Pattern</h3><p><strong><font color="#FF0000">※ 情境 : 當有許多僅在執行某些行為時略有不同的相似類時，可使用策略模式。</font></strong></p>
+<p>Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Transportation <span class="keyword">interface</span> &#123;</span><br><span class="line">	travel()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<a id="more"></a>
+
+
+<p>Strategies</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Car <span class="keyword">struct</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Car)</span> <span class="title">travel</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Travel by car"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Scooter <span class="keyword">struct</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Scooter)</span> <span class="title">travel</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Travel by scooter"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Train <span class="keyword">struct</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(t *Train)</span> <span class="title">travel</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Travel by train"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Execute func</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewTransportation</span><span class="params">(strategyType <span class="keyword">string</span>)</span> <span class="title">Transportation</span></span> &#123;</span><br><span class="line">	<span class="keyword">switch</span> strategyType &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"car"</span>:</span><br><span class="line">		<span class="keyword">return</span> &amp;Car&#123;&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"scooter"</span>:</span><br><span class="line">		<span class="keyword">return</span> &amp;Scooter&#123;&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"train"</span>:</span><br><span class="line">		<span class="keyword">return</span> &amp;Train&#123;&#125;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NavigateToTarget</span><span class="params">(strategy Transportation)</span></span> &#123;</span><br><span class="line">	strategy.travel()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Test</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"DesignPatterns/StrategyPattern"</span></span><br><span class="line">	<span class="string">"testing"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestStrategyPattern</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	strategy := StrategyPattern.NewTransportation(<span class="string">"scooter"</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> strategy == <span class="literal">nil</span> &#123;</span><br><span class="line">		t.Error(<span class="string">"Invalid transportation strategy"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	StrategyPattern.NavigateToTarget(strategy)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/extracurricular//" class="article-tag-list-link color1">extracurricular</a>
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/blog/2024/06/20/Abstract-Factory-Pattern/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Abstract Factory Pattern</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+
+  
 
 
           </div>
@@ -248,10 +301,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/blog/",
