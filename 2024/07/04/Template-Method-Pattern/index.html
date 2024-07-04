@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://tn00869679.github.io/blog">
-  <title>categories | Darren&#39;s blog</title>
+  <title>Template Method Pattern | Darren&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://tn00869679.github.io/blog/categories/index.html">
+  <meta name="description" content="Template Method Pattern※ 情境 : 當多個類的演算法除了一些細微不同之外，其他幾乎完全一樣時，可以使用樣板方法模式。但其後果就是，只要演算法發生變化，你就可能需要修改所有的類。 Interface 123456type SpendMoney interface &amp;#123;	goToStore()	buySomething()	pay()	goHome()&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Template Method Pattern">
+<meta property="og:url" content="https://tn00869679.github.io/blog/2024/07/04/Template-Method-Pattern/index.html">
 <meta property="og:site_name" content="Darren&#39;s blog">
+<meta property="og:description" content="Template Method Pattern※ 情境 : 當多個類的演算法除了一些細微不同之外，其他幾乎完全一樣時，可以使用樣板方法模式。但其後果就是，只要演算法發生變化，你就可能需要修改所有的類。 Interface 123456type SpendMoney interface &amp;#123;	goToStore()	buySomething()	pay()	goHome()&amp;#125;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-27T02:04:43.000Z">
-<meta property="article:modified_time" content="2020-07-27T02:31:54.441Z">
+<meta property="article:published_time" content="2024-07-04T02:18:00.000Z">
+<meta property="article:modified_time" content="2024-07-04T02:47:13.355Z">
 <meta property="article:author" content="Darren Lin">
 <meta name="twitter:card" content="summary">
   
@@ -173,27 +175,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Template-Method-Pattern" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      Template Method Pattern
     </h1>
   
 
         
-        <a href="/blog/categories/index.html" class="archive-article-date">
-  	<time datetime="2020-07-27T02:04:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
+        <a href="/blog/2024/07/04/Template-Method-Pattern/" class="archive-article-date">
+  	<time datetime="2024-07-04T02:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-07-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="Template-Method-Pattern"><a href="#Template-Method-Pattern" class="headerlink" title="Template Method Pattern"></a>Template Method Pattern</h3><p><strong><font color="#FF0000">※ 情境 : 當多個類的演算法除了一些細微不同之外，其他幾乎完全一樣時，可以使用樣板方法模式。但其後果就是，只要演算法發生變化，你就可能需要修改所有的類。</font></strong></p>
+<p>Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> SpendMoney <span class="keyword">interface</span> &#123;</span><br><span class="line">	goToStore()</span><br><span class="line">	buySomething()</span><br><span class="line">	pay()</span><br><span class="line">	goHome()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<a id="more"></a>
+
+
+<p>Template</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Shopping <span class="keyword">struct</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Shopping)</span> <span class="title">goToStore</span><span class="params">()</span></span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Shopping)</span> <span class="title">buySomething</span><span class="params">()</span></span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Shopping)</span> <span class="title">pay</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Pay money."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Shopping)</span> <span class="title">goHome</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Go home."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GoShopping</span><span class="params">(shop SpendMoney)</span></span> &#123;</span><br><span class="line">	shop.goToStore()</span><br><span class="line">	shop.buySomething()</span><br><span class="line">	shop.pay()</span><br><span class="line">	shop.goHome()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Shoes <span class="keyword">struct</span> &#123;</span><br><span class="line">	Shopping</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Shoes)</span> <span class="title">goToStore</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Go to Nike."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Shoes)</span> <span class="title">buySomething</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Buy the slippers."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Handbag <span class="keyword">struct</span> &#123;</span><br><span class="line">	Shopping</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(h *Handbag)</span> <span class="title">goToStore</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Go to the department store."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(h *Handbag)</span> <span class="title">buySomething</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Buy the GUCCI."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Test</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"DesignPatterns/TemplateMethodPattern"</span></span><br><span class="line">	<span class="string">"testing"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestTemplateMethodPattern</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	shoes := &amp;TemplateMethodPattern.Shoes&#123;&#125;</span><br><span class="line">	TemplateMethodPattern.GoShopping(shoes)</span><br><span class="line"></span><br><span class="line">	handbag := &amp;TemplateMethodPattern.Handbag&#123;&#125;</span><br><span class="line">	TemplateMethodPattern.GoShopping(handbag)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -202,6 +218,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -212,6 +239,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2024/06/30/Strategy-Pattern/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Strategy Pattern</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -230,6 +267,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -252,7 +299,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
