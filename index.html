@@ -78,7 +78,7 @@
 			</ul>
 		</nav>
                 <nav>
-                    總文章數 :  24
+                    總文章數 :  25
                 </nav>
 		<nav class="header-smart-menu">
     		
@@ -172,6 +172,84 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-123" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2024/08/29/123/">Adapter Pattern</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2024/08/29/123/" class="archive-article-date">
+  	<time datetime="2024-08-29T15:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Adapter-Pattern"><a href="#Adapter-Pattern" class="headerlink" title="Adapter Pattern"></a>Adapter Pattern</h3><p><strong><font color="#FF0000">※ 情境 : 當你希望使用某個類， 但是其介面與其他程式碼不相容時， 可以使用轉接器類。</font></strong></p>
+<p>Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Charger <span class="keyword">interface</span> &#123;</span><br><span class="line">	TypecCharge()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/blog/2024/08/29/123/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2024/08/29/123/">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Template-Method-Pattern" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -919,88 +997,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2023/04/26/Note-%E8%BB%9F%E9%AB%94%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F/">展開全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Merkle-Tree-Merkle-proof" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2023/04/23/Merkle-Tree-Merkle-proof/">Merkle Tree &amp; Merkle proof</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2023/04/23/Merkle-Tree-Merkle-proof/" class="archive-article-date">
-  	<time datetime="2023-04-23T15:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Merkle-Tree"><a href="#Merkle-Tree" class="headerlink" title="Merkle Tree"></a>Merkle Tree</h3><ul>
-<li>區塊鏈中用於驗證交易數據的加密技術。</li>
-<li>是一種二元樹，其中每個葉子節點表示一個交易，每個非葉子節點表示其子節點的雜湊值。</li>
-<li>技術的基本思想是通過計算雜湊值來驗證交易數據的完整性。</li>
-</ul>
-<p><strong><font color="#FF0000">※ 在區塊鏈中，每個區塊的頂部都有一個雜湊值，該雜湊值基於所有包含在該區塊中的交易的 Merkle Tree 計算得出。因此，如果任何一個交易被修改，整個 Merkle Tree 的雜湊值都會改變，進而使得區塊頂部的雜湊值也隨之改變，從而提示節點數據的篡改。</font></strong></p>
-<p><strong><font color="#FF0000">總體而言，Merkle Tree 技術能夠有效地驗證大量交易數據的完整性，並且具有高度的安全性和效率。這也是區塊鏈技術能夠實現去中心化和可信任的重要基礎之一。</font></strong></p>
-        
-          <a class="article-more-a" href="/blog/2023/04/23/Merkle-Tree-Merkle-proof/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2023/04/23/Merkle-Tree-Merkle-proof/">展開全文 >></a>
         </p>
       
 
